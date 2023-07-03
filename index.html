@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav>
+    <ul class="nav-menu">
+        <li><a class="active" href="#users">Users</a></li>
+        <li><a href="#logs">Logs</a></li>
+    </ul>
+</nav>
+<h1>User Table</h1>
+<table id="userTable" class="user-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>firstname</th>
+            <th>МЕФ</th>
+            <th>LVL сбора</th>
+            <th>LVL времени</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<dialog id="changeAmountDialog">
+    <input type="number" id="amountInput">
+    <button id="cancelButton">Cancel</button>
+    <button id="confirmButton">Done</button>
+</dialog>
+
+<script src="main.js"></script>
+<script src="utils.js"></script>
+</body>
+</html>
