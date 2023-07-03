@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to fetch user data from the server
   function fetchUsers() {
-    fetch("http://localhost:5000/users")
+    fetch("http://localhost:5000/users/users")
       .then((response) => response.json())
       .then((data) => {
         data.sort((a, b) => b.balance - a.balance);

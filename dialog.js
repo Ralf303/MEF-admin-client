@@ -1,8 +1,27 @@
+function generateColumnName(name) {
+  switch (name) {
+    case "balance":
+      return "меф";
+
+    case "meflvl":
+      return "LVL сбора";
+
+    case "timelvl":
+      return "LVL времени";
+    default:
+      return "Что то пошло не так";
+  }
+}
+
 function openDialog(chatId, column) {
+  const signInDialog = document.getElementById("signInDialog");
   const amountInput = document.getElementById("amountInput");
   const cancelButton = document.getElementById("cancelButton");
   const confirmButton = document.getElementById("confirmButton");
 
+  const modifineColumn = generateColumnName(column);
+
+  signInDialog.textContent = `Изменить ${modifineColumn} у ${chatId}`;
   amountInput.value = "";
 
   cancelButton.onclick = () => closeDialog();
@@ -26,7 +45,7 @@ function handleDialogConfirm(chatId, column) {
     column === "balance";
 
   if (isValidValue) {
-    fetch(`http://localhost:5000/users/${chatId}/${column}`, {
+    fetch(`http://localhost:5000/users/users/${chatId}/${column}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
