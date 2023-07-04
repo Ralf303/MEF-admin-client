@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Admin Panel</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/loginCheck.js"></script>
+</head>
+<body>
+    <h1>MEF admin</h1>
+    <nav>
+        <ul class="nav-menu">
+            <li><a class="active" href="users.html">Users</a></li>
+            <li><a href="#stats">Stats</a></li>
+            <li><a href="logs.html">Logs</a></li>
+        </ul>
+    </nav><br>
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search...">
+    </div>
+    <table id="userTable" class="user-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>firstname</th>
+                <th>МЕФ</th>
+                <th>LVL сбора</th>
+                <th>LVL времени</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <dialog id="changeAmountDialog">
+        <p id="signInDialog"></p>
+        <input type="number" id="amountInput">
+        <button id="cancelButton">Закрыть</button>
+        <button id="confirmButton">Готово</button>
+    </dialog>
+
+    <script src="js/userRequest.js"></script>
+    <script src="js/dialog.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
