@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to fetch user data from the server
   function fetchUsers() {
-    fetch("http://localhost:5000/logs/getLogs")
+    fetch("http://45.132.18.157:5000/logs/getLogs")
       .then((response) => response.json())
       .then((data) => {
         data.sort((a, b) => b.id - a.id);

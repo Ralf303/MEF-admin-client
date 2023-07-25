@@ -55,7 +55,7 @@ function handleDialogConfirm(chatId, column) {
     column === "balance";
 
   if (isValidValue) {
-    fetch(`http://localhost:5000/users/changeValue/${chatId}/${column}`, {
+    fetch(`http://45.132.18.157:5000/users/changeValue/${chatId}/${column}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

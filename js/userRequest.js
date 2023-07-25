@@ -2,7 +2,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Функция для получения данных пользователей с сервера
   async function fetchUsers() {
     try {
-      const response = await fetch("http://localhost:5000/users/getAllUsers");
+      const response = await fetch(
+        "http://45.132.18.157:5000/users/getAllUsers"
+      );
       const data = await response.json();
 
       // Cортировка данных по балансу (от большего к меньшему)
