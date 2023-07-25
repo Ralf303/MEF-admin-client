@@ -3,6 +3,20 @@ body {
     background-color: #f1f1f1;
 }
 
+.logo {
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+    color: #142850;
+    background-color: #f2f2f2;
+}
+
+h2 {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
 .nav-menu {
     display: flex;
     justify-content: space-between;
@@ -33,7 +47,7 @@ body {
     background-color: #00A8CC;
 }
 
-.user-table {
+.table {
     border-collapse: collapse;
     width: 100%;
     margin-bottom: 20px;
@@ -41,22 +55,22 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.user-table th,
-.user-table td {
+.table th,
+.table td {
     text-align: left;
     padding: 8px;
 }
 
-.user-table th {
+.table th {
     background-color: #0C7B93;
     color: #fff;
 }
 
-.user-table tr:nth-child(even) {
+.table tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-.user-table tr:hover {
+.table tr:hover {
     background-color: #ddd;
 }
 
@@ -96,4 +110,20 @@ body {
     padding: 10px;
     width: 100%;
     box-sizing: border-box;
+}
+
+#logoutButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: #32e0c4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#logoutButton:hover {
+    opacity: 0.8;
 }

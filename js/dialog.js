@@ -21,14 +21,24 @@ function openDialog(chatId, column) {
 
   const modifineColumn = generateColumnName(column);
 
-  signInDialog.textContent = `Изменить ${modifineColumn} у ${chatId}`;
-  amountInput.value = "";
+  if (localStorage.getItem("status") === "founder") {
+    signInDialog.textContent = `Изменить ${modifineColumn} у ${chatId}`;
+    amountInput.value = "";
 
-  cancelButton.onclick = () => closeDialog();
-  confirmButton.onclick = () => handleDialogConfirm(chatId, column);
+    cancelButton.onclick = () => closeDialog();
+    confirmButton.onclick = () => handleDialogConfirm(chatId, column);
 
-  const changeAmountDialog = document.getElementById("changeAmountDialog");
-  changeAmountDialog.showModal();
+    const changeAmountDialog = document.getElementById("changeAmountDialog");
+    changeAmountDialog.showModal();
+  } else {
+    signInDialog.textContent = "Вам это не доступно";
+    amountInput.style.display = "none";
+    confirmButton.style.display = "none";
+    cancelButton.onclick = () => closeDialog();
+
+    const changeAmountDialog = document.getElementById("changeAmountDialog");
+    changeAmountDialog.showModal();
+  }
 }
 
 function closeDialog() {
@@ -45,7 +55,7 @@ function handleDialogConfirm(chatId, column) {
     column === "balance";
 
   if (isValidValue) {
-    fetch(`http://localhost:5000/users/users/${chatId}/${column}`, {
+    fetch(`http://localhost:5000/users/changeValue/${chatId}/${column}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

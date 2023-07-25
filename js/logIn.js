@@ -22,17 +22,25 @@ function validateForm() {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({ username: username, password: password }),
+    body: JSON.stringify({
+      username: username,
+      password: password,
+    }),
   })
     .then((response) => response.json())
     .then((data) => {
-      if (data === true) {
-        // Save username to local storage
-        localStorage.setItem("username", username);
+      console.log(data);
+      if (data.authenticated) {
+        // Save username and role status to local storage
+        localStorage.setItem("id", username);
+        localStorage.setItem("status", data.status);
         // Redirect to users.html
         window.location.href = "users.html";
       } else {
-        alert("Invalid username or password");
+        alert("Неверный логин или пароль");
       }
+    })
+    .catch((error) => {
+      console.error("Error registering user:", error);
     });
 }

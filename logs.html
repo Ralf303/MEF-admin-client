@@ -7,7 +7,8 @@
 </head>
 <body>
 
-    <h1><h1>MEF admin</h1></h1>
+    <h1 class="logo">MEF admin</h1>
+    <button id="logoutButton" onclick="logOut()">Выйти</button>
     <nav>
         <ul class="nav-menu">
             <li><a href="users.html">Users</a></li>
@@ -18,7 +19,7 @@
     <div class="search-container">
         <input type="text" id="searchInput" placeholder="Search...">
     </div>
-    <table id="userTable" class="user-table">
+    <table id="userTable" class="table">
         <thead>
             <tr>
                 <th>Время</th>
@@ -30,6 +31,7 @@
         </tbody>
     </table>
 
+    <script src="js/logOut.js"></script>
     <script src="js/logsRequest.js"></script>
     <script src="js/search.js"></script>
 </body>
