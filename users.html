@@ -4,27 +4,27 @@
     <meta charset="utf-8">
     <title>Admin Panel</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/loginCheck.js"></script>
+    <script src="js//utils/loginCheck.js"></script>
 </head>
 <body>
     <h1 class="logo">MEF admin</h1>
     <button id="logoutButton" onclick="logOut()">Выйти</button>
     <nav>
         <ul class="nav-menu">
-            <li><a class="active" href="users.html">Users</a></li>
-            <li><a href="stats.html" >Stats</a></li>
-            <li><a href="logs.html">Logs</a></li>
+            <li><a class="active" href="users.html">Юзеры</a></li>
+            <li><a href="stats.html" >Статистика</a></li>
+            <li><a href="logs.html">Логи</a></li>
         </ul>
     </nav><br>
     <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search...">
+        <input type="text" id="searchInput" placeholder="Поиск...">
     </div>
     <table id="userTable" class="table">
         <thead>
             <tr>
                 <th>ID</th>
-                <th>Username</th>
-                <th>firstname</th>
+                <th>Юзернейм</th>
+                <th>Имя</th>
                 <th>МЕФ</th>
                 <th>LVL сбора</th>
                 <th>LVL времени</th>
@@ -41,9 +41,9 @@
         <button id="confirmButton">Готово</button>
     </dialog>
 
-    <script src="js/logOut.js"></script>
-    <script src="js/userRequest.js"></script>
-    <script src="js/dialog.js"></script>
-    <script src="js/search.js"></script>
+    <script src="js//utils/logOut.js"></script>
+    <script src="js//content-requests/userRequest.js"></script>
+    <script src="js//utils/dialog.js"></script>
+    <script src="js//utils/search.js"></script>
 </body>
 </html>

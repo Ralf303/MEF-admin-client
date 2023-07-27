@@ -1,3 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+}
+
+.logo {
+    display: inline-block;
+    margin: 0;
+    padding: 10px;
+    color: #142850;
+    background-color: #f2f2f2;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #142850;
+}
+
+.nav-menu li {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-menu li a {
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav-menu li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.active {
+    background-color: #00A8CC;
+}
+
+#logoutButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: #32e0c4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#logoutButton:hover {
+    opacity: 0.8;
+}
+
 .table h2 {
     text-align: center;
     margin-top: 0;
@@ -31,4 +90,9 @@
 
 .stats-tables .table {
     flex-basis: 30%;
+}
+
+.table tr td {
+    text-align: center;
+    vertical-align: middle;
 }

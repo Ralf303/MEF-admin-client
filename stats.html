@@ -3,93 +3,80 @@
 <head>
     <meta charset="utf-8">
     <title>Admin Panel</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/stats.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js//utils/loginCheck.js"></script>
 </head>
 <body>
-
     <h1 class="logo">MEF admin</h1>
     <button id="logoutButton" onclick="logOut()">Выйти</button>
     <nav>
         <ul class="nav-menu">
-            <li><a href="users.html">Users</a></li>
-            <li><a class="active" href="stats.html">Stats</a></li>
-            <li><a href="logs.html">Logs</a></li>
+            <li><a href="users.html">Юзеры</a></li>
+            <li><a class="active" href="stats.html">Статистика</a></li>
+            <li><a href="logs.html">Логи</a></li>
         </ul>
     </nav><br>
-
-    <h2>User Statistics</h2>
+    <h2>Общая статистика</h2>
     <div class="stats-container">
         <div class="user-stats">
-            <p>Total Users: 1000</p>
-            <p>Total MEF: 500</p>
-            <p>Active Users: 800</p>
+            <p id="allUsers">Всего юзеров: </p>
+            <p id="allMef">Всего мефа: </p>
+            <p id="activeUsers">Активных юзеров: </p>
         </div>
-
         <div class="table">
-            <h2>Top 10 Captchas</h2>
+            <h2>Топ 10 по капчам</h2>
             <table>
                 <tr>
-                    <th>Name</th>
-                    <th>Count</th>
+                    <th>Имя</th>
+                    <th>Количество</th>
                 </tr>
-                <tr>
-                    <td>Captcha 1</td>
-                    <td>50</td>
-                </tr>
+ 
                 <!-- Repeat for each captcha -->
             </table>
         </div>
     </div>
-
     <div class="stats-tables">
-        <div class="table">
-            <h2>Top 15 Users (Today)</h2>
+        <div class="table" id="day">
+            <h2>Топ 15 по активу за день</h2>
             <table>
                 <tr>
-                    <th>Name</th>
-                    <th>Count</th>
+                    <th>Имя</th>
+                    <th>Количество</th>
                 </tr>
-                <tr>
-                    <td>User 1</td>
-                    <td>10</td>
-                </tr>
+    
                 <!-- Repeat for each user -->
             </table>
         </div>
-
-        <div class="table">
-            <h2>Top 15 Users (Week)</h2>
+        <div class="table" id="week">
+            <h2>Топ 15 по активу за неделю</h2>
             <table>
                 <tr>
-                    <th>Name</th>
-                    <th>Count</th>
+                    <th>Имя</th>
+                    <th>Количество</th>
                 </tr>
-                <tr>
-                    <td>User 1</td>
-                    <td>20</td>
-                </tr>
+    
                 <!-- Repeat for each user -->
             </table>
         </div>
-
-        <div class="table">
-            <h2>Top 15 Users (Month)</h2>
+        <div class="table" id="month">
+            <h2>Топ 15 по активу за месяц</h2>
             <table>
                 <tr>
-                    <th>Name</th>
-                    <th>Count</th>
+                    <th>Имя</th>
+                    <th>Количество</th>
                 </tr>
-                <tr>
-                    <td>User 1</td>
-                    <td>30</td>
-                </tr>
+ 
                 <!-- Repeat for each user -->
             </table>
         </div>
     </div>
-
-    <script src="js/logOut.js"></script>
+    <script src="js//stat-content/global-stat.js"></script>
+    <script src="js//stat-content/day-stat.js"></script>
+    <script src="js//stat-content/week-stat.js"></script>
+    <script src="js//stat-content/month-stat.js"></script>
+    <script src="js//stat-content/capture-stat.js"></script>
+    <script src="js//stat-content/stat-request.js"></script>
+    <script src="js//utils/logOut.js"></script>
 </body>
 </html>
