@@ -6,29 +6,30 @@
   
     <link rel="stylesheet" type="text/css" href="css/profile.css">
     <script src="js/content-requests/profile-request.js"></script>
+    <script src="js/contet-profile/user-table-content.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="left">
             <h1>Профиль пользователя</h1>
             <div class="profile-info">
-                <p>Поле для имени: <span id="name">Имя</span></p>
+                <p>Поле для имени: <span id="name"></span></p>
                 <p>Юзер нейм: <span id="username">Имя пользователя</span></p>
-                <p>Айди: <span id="id">1234</span></p>
-                <p>Статус: <span id="role">Основатель</span></p>
-                <p>Дата регистрации: <span id="registration-date">01.01.2022</span></p>
-                <p>Баланс: <span id="balance">10</span></p>
-                <p>Количество кейсов номер 1: <span id="cases-1">5</span></p>
-                <p>Количество кейсов номер 2: <span id="cases-2">8</span></p>
-                <p>Количество кейсов номер 3: <span id="cases-3">2</span></p>
-                <p>Количество кейсов номер 4: <span id="cases-4">2</span></p>
-                <p>Количество донат кейсов: <span id="cases-donate">2</span></p>
-                <p>Всего введено капчей: <span id="captcha-count">100</span></p>
-                <p>Сообщений за день: <span id="messages-day">50</span></p>
-                <p>Сообщений за неделю: <span id="messages-week">250</span></p>
-                <p>Сообщений за месяц: <span id="messages-month">1000</span></p>
-                <p>Уровень сбора: <span id="collect-level">5</span></p>
-                <p>Уровень времени : <span id="time-level">2</span></p>
+                <p>Айди: <span id="id"></span></p>
+                <p>Статус: <span id="role"></span></p>
+                <p>Дата регистрации: <span id="registration-date"></span></p>
+                <p>Баланс: <span id="balance"></span></p>
+                <p>Количество кейсов номер 1: <span id="cases-1"></span></p>
+                <p>Количество кейсов номер 2: <span id="cases-2"></span></p>
+                <p>Количество кейсов номер 3: <span id="cases-3"></span></p>
+                <p>Количество кейсов номер 4: <span id="cases-4"></span></p>
+                <p>Количество донат кейсов: <span id="cases-donate"></span></p>
+                <p>Всего введено капчей: <span id="captcha-count"></span></p>
+                <p>Сообщений за день: <span id="messages-day"></span></p>
+                <p>Сообщений за неделю: <span id="messages-week"></span></p>
+                <p>Сообщений за месяц: <span id="messages-month"></span></p>
+                <p>Уровень сбора: <span id="mef-level"></span></p>
+                <p>Уровень времени : <span id="time-level"></span></p>
             </div>
         </div>
         <div class="right">
@@ -41,18 +42,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Вещь 1</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Вещь 2</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Вещь 3</td>
-                    </tr>
+                  
                 </tbody>
             </table>
         </div>
@@ -80,5 +70,7 @@
     <script src="js/content-requests/logsRequest.js"></script>
     <script src="js/utils/search.js"></script>
     <script src="js/utils/getIdFromParam.js"></script>
+    <script src="js/utils/convertTime.js"></script>
+    <script src="js/contet-profile/item-table-create.js"></script>
 </body>
 </html>
