@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.json())
       .then((data) => {
         data.sort((a, b) => b.id - a.id);
-        console.log(data);
+
         const tableBody = document.querySelector("#userTable tbody");
 
         tableBody.innerHTML = ""; // Clear existing rows

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Профиль пользователя</title>
+      <meta charset="UTF-8">
+  
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
+    <script src="js/content-requests/profile-request.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>Профиль пользователя</h1>
+            <div class="profile-info">
+                <p>Поле для имени: <span id="name">Имя</span></p>
+                <p>Юзер нейм: <span id="username">Имя пользователя</span></p>
+                <p>Айди: <span id="id">1234</span></p>
+                <p>Статус: <span id="role">Основатель</span></p>
+                <p>Дата регистрации: <span id="registration-date">01.01.2022</span></p>
+                <p>Баланс: <span id="balance">10</span></p>
+                <p>Количество кейсов номер 1: <span id="cases-1">5</span></p>
+                <p>Количество кейсов номер 2: <span id="cases-2">8</span></p>
+                <p>Количество кейсов номер 3: <span id="cases-3">2</span></p>
+                <p>Количество кейсов номер 4: <span id="cases-4">2</span></p>
+                <p>Количество донат кейсов: <span id="cases-donate">2</span></p>
+                <p>Всего введено капчей: <span id="captcha-count">100</span></p>
+                <p>Сообщений за день: <span id="messages-day">50</span></p>
+                <p>Сообщений за неделю: <span id="messages-week">250</span></p>
+                <p>Сообщений за месяц: <span id="messages-month">1000</span></p>
+                <p>Уровень сбора: <span id="collect-level">5</span></p>
+                <p>Уровень времени : <span id="time-level">2</span></p>
+            </div>
+        </div>
+        <div class="right">
+            <h2>Таблица вещей пользователя</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>id вещи</th>
+                        <th>название вещи</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Вещь 1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Вещь 2</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Вещь 3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="log-window">
+        <div class="logs">
+            <h2>Логи действий</h2>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Поиск...">
+            </div>
+            <table id="userTable" class="table">
+                <thead>
+                    <tr>
+                        <th>Время</th>
+                        <th>Действие</th>
+                        <th>Данные(1, 2)<br><b>МЕФ</b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/content-requests/logsRequest.js"></script>
+    <script src="js/utils/search.js"></script>
+    <script src="js/utils/getIdFromParam.js"></script>
+</body>
+</html>

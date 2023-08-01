@@ -72,7 +72,12 @@ function createTableRow(user) {
   row.appendChild(usernameCell);
 
   const firstnameCell = document.createElement("td");
-  firstnameCell.textContent = user.firstname;
+  const firstnameLink = document.createElement("a");
+  firstnameLink.href = `profile.html?id=${user.chatId}`;
+  firstnameLink.textContent = user.firstname;
+  firstnameLink.style.textDecoration = "none"; // Убираем подчеркивание
+  firstnameLink.style.color = "black"; // Устанавливаем цвет текста в черный
+  firstnameCell.appendChild(firstnameLink);
   row.appendChild(firstnameCell);
 
   const balanceCell = document.createElement("td");
