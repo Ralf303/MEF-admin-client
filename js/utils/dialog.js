@@ -8,11 +8,27 @@ function generateColumnName(name) {
 
     case "timelvl":
       return "LVL времени";
+
+      case "minecraftCase":
+        return "количество майн кейсов"
+
+        case "brawlCase":
+        return "количество бравл кейсов"
+
+        case "hotlineCase":
+          return "количество хотлайн кейсов"
+
+          case "falloutCase":
+          return "количество фоллаут кейсов"
+
+          case "donateCase":
+          return "количество донат кейсов"
+
     default:
       return "Что то пошло не так";
   }
 }
-
+//коммент чтобы так надо
 function openDialog(chatId, column) {
   const signInDialog = document.getElementById("signInDialog");
   const amountInput = document.getElementById("amountInput");
@@ -51,8 +67,8 @@ function handleDialogConfirm(chatId, column) {
   const amount = amountInput.value;
 
   const isValidValue =
-    (column !== "balance" && amount >= 1 && amount <= 4) ||
-    column === "balance";
+    ((column === "meflvl" || column === "timelvl") && amount >= 1 && amount <= 4) || (column !== "meflvl" && column !== "timelvl")
+    ;
 
   if (isValidValue) {
     fetch(`http://45.132.18.157:5000/users/changeValue/${chatId}/${column}`, {
