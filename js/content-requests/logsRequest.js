@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to fetch user data from the server
-  function fetchUsers() {
+  function fetchLogs() {
     fetch("http://45.132.18.157:5000/logs/getLogs")
       .then((response) => response.json())
       .then((data) => {
@@ -34,11 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
           tableBody.appendChild(row);
         });
+        logFilter()
       })
+      
       .catch((error) => {
         console.error("Error retrieving logs data:", error);
       });
   }
 
-  fetchUsers();
+  fetchLogs()
 });

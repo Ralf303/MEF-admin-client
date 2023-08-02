@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
      
       createUserTable(user)
       createItemTable(user)
-    } catch (error) {
+          } catch (error) {
       console.error("Error retrieving user data:", error);
     }
   }
