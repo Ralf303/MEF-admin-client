@@ -75,6 +75,13 @@ function createTableRow(user) {
   const firstnameLink = document.createElement("a");
   firstnameLink.href = `profile.html?id=${user.chatId}`;
   firstnameLink.textContent = user.firstname;
+
+  if (user.firstname.length > 30) {
+    firstnameLink.textContent = user.firstname.slice(0, 30) + "...";
+  } else {
+    firstnameLink.textContent = user.firstname;
+  }
+
   firstnameLink.style.textDecoration = "none"; // Убираем подчеркивание
   firstnameLink.style.color = "black"; // Устанавливаем цвет текста в черный
   firstnameCell.appendChild(firstnameLink);
@@ -97,6 +104,10 @@ function createTableRow(user) {
   timelvlCell.setAttribute("data-id", user.chatId);
   timelvlCell.setAttribute("data-column", "timelvl");
   row.appendChild(timelvlCell);
+
+  const gemsCell = document.createElement("td");
+  gemsCell.textContent = user.gems;
+  row.appendChild(gemsCell);
 
   // Добавляем обработчики событий клика на ячейки
   balanceCell.addEventListener("click", () => {

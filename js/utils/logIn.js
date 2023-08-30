@@ -29,7 +29,6 @@ function validateForm() {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       if (data.authenticated) {
         // Save username and role status to local storage
         localStorage.setItem("id", username);
