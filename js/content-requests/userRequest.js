@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   async function fetchUsers() {
     try {
       const response = await fetch(
-        "http://45.132.18.157:5000/users/getAllUsers"
+        "https://45.132.18.157:5000/users/getAllUsers"
       );
       const data = await response.json();
 
@@ -64,7 +64,7 @@ function createTableRow(user) {
 
   const usernameCell = document.createElement("td");
   const usernameLink = document.createElement("a");
-  usernameLink.href = `https://t.me/${user.username}`;
+  usernameLink.href = `httpss://t.me/${user.username}`;
   usernameLink.textContent = user.username;
   usernameLink.style.textDecoration = "none"; // Убираем подчеркивание
   usernameLink.style.color = "black"; // Устанавливаем цвет текста в черный

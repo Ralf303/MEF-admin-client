@@ -11,8 +11,9 @@ function checkIdInLocalStorage() {
     window.location.href = "users.html";
     return;
   }
+
   if (id) {
-    fetch("http://45.132.18.157:5000/users/checkLogin", {
+    fetch("https://45.132.18.157:5000/users/checkLogin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

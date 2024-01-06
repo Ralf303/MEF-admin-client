@@ -17,7 +17,7 @@ function validateForm() {
     return false;
   }
 
-  fetch("http://45.132.18.157:5000/users/registration", {
+  fetch("https://45.132.18.157:5000/users/registration", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

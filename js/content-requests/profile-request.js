@@ -4,14 +4,13 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       const userId = getParameterByName("id");
       const response = await fetch(
-        `http://45.132.18.157:5000/users/getOneUser/${userId}`
+        `https://45.132.18.157:5000/users/getOneUser/${userId}`
       );
       const user = await response.json();
 
-     
-      createUserTable(user)
-      createItemTable(user)
-          } catch (error) {
+      createUserTable(user);
+      createItemTable(user);
+    } catch (error) {
       console.error("Error retrieving user data:", error);
     }
   }

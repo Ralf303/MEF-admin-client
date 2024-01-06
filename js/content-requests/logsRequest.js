@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to fetch user data from the server
   function fetchLogs() {
-    fetch("http://45.132.18.157:5000/logs/getLogs")
+    fetch("https://45.132.18.157:5000/logs/getLogs")
       .then((response) => response.json())
       .then((data) => {
         data.sort((a, b) => b.id - a.id);
@@ -34,13 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
           tableBody.appendChild(row);
         });
-        logFilter()
+        logFilter();
       })
-      
+
       .catch((error) => {
         console.error("Error retrieving logs data:", error);
       });
   }
 
-  fetchLogs()
+  fetchLogs();
 });
