@@ -13,7 +13,7 @@ function checkIdInLocalStorage() {
   }
 
   if (id) {
-    fetch("https://45.132.18.157:5000/users/checkLogin", {
+    fetch("https://mefadmin.ru:5000/users/checkLogin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

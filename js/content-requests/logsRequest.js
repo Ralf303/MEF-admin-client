@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Function to fetch user data from the server
   function fetchLogs() {
-    fetch("https://45.132.18.157:5000/logs/getLogs")
+    fetch("https://mefadmin.ru:5000/logs/getLogs")
       .then((response) => response.json())
       .then((data) => {
         data.sort((a, b) => b.id - a.id);

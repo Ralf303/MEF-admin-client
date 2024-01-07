@@ -72,7 +72,7 @@ function handleDialogConfirm(chatId, column) {
       amount <= 4) ||
     (column !== "meflvl" && column !== "timelvl");
   if (isValidValue) {
-    fetch(`https://45.132.18.157:5000/users/changeValue/${chatId}/${column}`, {
+    fetch(`https://mefadmin.ru:5000/users/changeValue/${chatId}/${column}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

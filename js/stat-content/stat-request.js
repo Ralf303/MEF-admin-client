@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   async function fetchUsers() {
     try {
       const response = await fetch(
-        "https://45.132.18.157:5000/users/getAllUsers"
+        "https://mefadmin.ru:5000/users/getAllUsers"
       );
       const data = await response.json();
 

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     try {
       const userId = getParameterByName("id");
       const response = await fetch(
-        `https://45.132.18.157:5000/users/getOneUser/${userId}`
+        `https://mefadmin.ru:5000/users/getOneUser/${userId}`
       );
       const user = await response.json();
 
